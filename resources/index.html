@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trekking Adventures</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Additional styles to improve the homepage appearance */
+        .hero-section {
+            background-image: url('images/1.webp');
+            background-size: cover;
+            background-position: center;
+            height: 75vh;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .feature-img {
+            height: 200px;
+            /* Adjust based on your preference */
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Adventure Treks</a>
+            <button class="navbar-toggler hidden-lg-up" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" aria-current="page">Home
+                            <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="all_treks.html">All Treks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customize.html">Customize Treks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Suggest me a Trek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="articles.html">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search" />
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <h1>Welcome to Trekking Adventures</h1>
+            <p>Explore the world's most beautiful trails with us.</p>
+            <a href="#" class="btn btn-primary">Discover More</a>
+        </div>
+    </section>
+
+    <!-- Featured Treks Section -->
+    <div class="container mt-5">
+        <h2 class="mb-4">Featured Treks</h2>
+        <div class="row">
+            <!-- Trek 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/3.webp" class="card-img-top feature-img" alt="Trek Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Trek Name</h5>
+                        <p class="card-text">Brief description of the trek highlighting its main attractions.</p>
+                        <a href="#" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Trek 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/2.jpg" class="card-img-top feature-img" alt="Trek Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Trek Name</h5>
+                        <p class="card-text">Brief description of the trek highlighting its main attractions.</p>
+                        <a href="#" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/4.webp" class="card-img-top feature-img" alt="Trek Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Trek Name</h5>
+                        <p class="card-text">Brief description of the trek highlighting its main attractions.</p>
+                        <a href="#" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="container text-center my-5">
+        <h2>Join Our Trekking Community</h2>
+        <p>Sign up for our newsletter to get the latest trek updates and special offers directly to your inbox!</p>
+        <form>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <button type="submit" class="btn btn-success">Subscribe</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-muted py-4 bg-dark text-white-50 fixed-bottom">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#" class="text-white">Back to top</a>
+            </p>
+            <p class="mb-1">Trekking Adventures &copy; 2024</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
