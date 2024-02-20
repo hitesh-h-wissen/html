@@ -5,56 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trekking Adventures</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Additional styles can go here */
-        .carousel-item img {
-            height: 65vh;
-            /* Adjust the height of the carousel images */
-            object-fit: cover;
-        }
         .carousel-caption {
             background: rgba(0, 0, 0, 0.5);
             border-radius: 5px;
         }
+
+        .carousel-img {
+            height: 500px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .section-padding {
+            padding: 40px 0;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            height: 200px;
+            /* Fixed height for consistency */
+            object-fit: cover;
+            /* Ensure the image covers the area */
+        }
+
+        #gallery img {
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        #testimonials .carousel-item {
+            color: #555;
+            margin: 0 auto;
+            max-width: 800px;
+            /* Adjust based on your design */
+            padding: 20px;
+            text-align: center;
+        }
+
+        #testimonials blockquote {
+            border: none;
+            font-style: italic;
+        }
+
+        #testimonials .carousel-control-prev-icon,
+        #testimonials .carousel-control-next-icon {
+            background-color: #000;
+            /* Change to a color that contrasts your background */
+        }
+
+        #testimonials .carousel-control-prev-icon:hover,
+        #testimonials .carousel-control-next-icon:hover {
+            background-color: #555;
+            /* Slightly different color for hover effect */
+        }
     </style>
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
+
 </head>
 
 <body>
 
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="index.html">Trekking Adventures</a>
+    <!-- Navigation (Placeholder for your actual navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">TrekkingSite</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="all_treks.html">Destinations</a>
+                    <a class="nav-link" href="#">Destinations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="customize.html">Customize My Trek</a>
+                    <a class="nav-link" href="#">Equipment Store</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="articles.html">Articles</a>
+                    <a class="nav-link" href="#">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="store.html">Store</a>
+                    <a class="nav-link" href="#">Contact Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                
             </ul>
         </div>
     </nav>
-    <!-- Carousel for featured treks -->
+
     <div id="featuredTreksCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#featuredTreksCarousel" data-slide-to="0" class="active"></li>
@@ -63,21 +113,21 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active" data-interval="1000">
-                <img src="resources/images/1.webp" class="d-block w-100" alt="Trek 1">
+                <img src="resources/images/1.webp" class="d-block w-100 carousel-img" alt="Trek 1">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Trek to Himalayas</h5>
                     <p>Short description of the trek.</p>
                 </div>
             </div>
             <div class="carousel-item" data-interval="1000">
-                <img src="resources/images/2.webp" class="d-block w-100" alt="Trek 2">
+                <img src="resources/images/2.webp" class="d-block w-100 carousel-img" alt="Trek 2">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Featured Trek 2</h5>
                     <p>Short description of the trek.</p>
                 </div>
             </div>
             <div class="carousel-item" data-interval="1000">
-                <img src="resources/images/3.webp" class="d-block w-100" alt="Trek 3">
+                <img src="resources/images/3.webp" class="d-block w-100 carousel-img" alt="Trek 3">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Featured Trek 3</h5>
                     <p>Short description of the trek.</p>
@@ -94,14 +144,15 @@
         </a>
     </div>
 
-    <!-- Main Content -->
-    <div class="container mt-4">
-        <h2>Welcome to Trekking Adventures</h2>
-        <p>Your one-stop destination for all things trekking. Explore our featured treks, read insightful articles, and
-            gear up at our store.</p>
-        <!-- Additional content can go here -->
-    </div>
+    <!-- Introduction Section -->
+    <section class="introduction section-padding text-center">
+        <div class="container">
+            <h2>Welcome to TrekkingSite</h2>
+            <p>Explore the world with us. Find your next adventure and make unforgettable memories.</p>
+        </div>
+    </section>
 
+    <!-- Upcoming Treks Section -->
     <section class="upcoming-treks section-padding">
         <div class="container">
             <h2 class="text-center">Upcoming Treks</h2>
@@ -198,30 +249,101 @@
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <div class="container text-center my-5 p-5">
-        <h2>Join Our Trekking Community</h2>
-        <p>Sign up for our newsletter to get the latest trek updates and special offers directly to your inbox!</p>
-        <form>
-            <div class="mb-3">
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+
+    <section id="testimonials" class="mt-5 bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Testimonials</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">"I had an amazing experience trekking with [Your Company]. The guides were
+                                knowledgeable and the scenery was breathtaking!"</p>
+                            <footer class="blockquote-footer">John Doe, <cite title="Source Title">Everest Base Camp
+                                    Trek</cite></footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">"The trek was well-organized, and the support from the team was fantastic.
+                                Highly recommended!"</p>
+                            <footer class="blockquote-footer">Jane Smith, <cite title="Source Title">Annapurna Circuit
+                                    Trek</cite></footer>
+                        </blockquote>
+                    </div>
+                    <!-- Add more testimonials as needed -->
+                </div>
+                <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="color: #000;"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="color: #000;"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <button type="submit" class="btn btn-success">Subscribe</button>
-        </form>
-    </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4"><a href="contact.html">Contact Us</a></h2>
+            <form>
+                <div class="row align-items-end">
+                    <div class="col-lg-3 mb-3 mb-lg-0">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="col-lg-3 mb-3 mb-lg-0">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                    </div>
+                    <div class="col-lg-4 mb-3 mb-lg-0">
+                        <input type="text" class="form-control" placeholder="Your Message">
+                    </div>
+                    <div class="col-lg-2 text-lg-right">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
 
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-dark text-white fixed-bottom">
-        <div class="container text-center">
-            <span>&copy; 2024 Trekking Adventures</span>
+    <footer class="bg-dark text-white text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">TrekkingSite</h5>
+                    <p>
+                        Sharing the passion for trekking and adventures. Join us to explore the beauty of the outdoors.
+                    </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <!-- Add social media icons -->
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
         </div>
+        <!-- Grid container -->
     </footer>
 
-    <!-- Bootstrap and jQuery scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
 </body>
 
 </html>
