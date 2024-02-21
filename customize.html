@@ -9,35 +9,28 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <style>
+        .custom-trek-form {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
         body {
-            background-color: #f0f2f5;
-            background-image: url('resources/images/1.webp');
-
+            background-image: url('resources/images/trek\ \(66\).jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
         }
-
-        .content {
-            padding-top: 60px;
-            /* Adjust based on your navbar's height */
-            padding-bottom: 100px;
-            /* Adjust based on your footer's height */
+        .form-background {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 40px 20px;
+            backdrop-filter: blur(5px);
         }
-
-        .card-customize-trek {
-            max-width: 600px;
-            margin: auto;
-
+        .container {
+            max-width: 960px;
         }
-
-        .btn-custom {
-            background-color: #007bff;
-            color: #ffffff;
-        }
-
-        .btn-custom:hover {
-            background-color: #0056b3;
-        }
-
-        /* Add styles for your navbar and footer if necessary */
     </style>
 </head>
 
@@ -75,51 +68,48 @@
     </nav>
 
 
-    <div class="container content p-lg-5">
-        <div class="card card-customize-trek">
-            <div class="card-header">
-                Customize Your Trek
-            </div>
-            <div class="card-body">
+    <div class="form-background">
+        <div class="container">
+            <div class="custom-trek-form">
+                <h2 class="text-center mb-4">Customize Your Trek</h2>
                 <form>
-                    <div class="mb-3">
-                        <label for="destination" class="form-label">Destination</label>
-                        <select class="form-select" id="destination" required>
-                            <option selected>Choose...</option>
-                            <option value="Everest Base Camp">Everest Base Camp</option>
-                            <option value="Annapurna Circuit">Annapurna Circuit</option>
-                            <option value="Langtang Valley">Langtang Valley</option>
-                            <!-- Add more destinations as needed -->
+                    <div class="form-group">
+                        <label for="trekName">Trek Name</label>
+                        <input type="text" class="form-control" id="trekName" placeholder="Enter the name of the trek">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" class="form-control" id="startDate">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="endDate">End Date</label>
+                            <input type="date" class="form-control" id="endDate">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="groupSize">Group Size</label>
+                        <select class="form-control" id="groupSize">
+                            <option>1-5</option>
+                            <option>6-10</option>
+                            <option>11-15</option>
+                            <option>16+</option>
                         </select>
                     </div>
-
-                    <div class="mb-3">
-                        <label for="trekDate" class="form-label">Trek Date</label>
-                        <input type="text" class="form-control" id="trekDate" placeholder="Select date range" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="difficulty" class="form-label">Difficulty Level</label>
-                        <select class="form-select" id="difficulty" required>
-                            <option selected>Choose...</option>
-                            <option value="Easy">Easy</option>
-                            <option value="Moderate">Moderate</option>
-                            <option value="Challenging">Challenging</option>
+                    <div class="form-group">
+                        <label for="difficultyLevel">Difficulty Level</label>
+                        <select class="form-control" id="difficultyLevel">
+                            <option>Easy</option>
+                            <option>Moderate</option>
+                            <option>Difficult</option>
+                            <option>Expert</option>
                         </select>
                     </div>
-
-                    <div class="mb-3">
-                        <label for="groupSize" class="form-label">Group Size</label>
-                        <input type="number" class="form-control" id="groupSize" placeholder="Enter group size"
-                            required>
+                    <div class="form-group">
+                        <label for="specialRequests">Special Requests</label>
+                        <textarea class="form-control" id="specialRequests" rows="3" placeholder="Any special requirements or requests?"></textarea>
                     </div>
-
-                    <div class="mb-3">
-                        <label for="specialRequests" class="form-label">Special Requests</label>
-                        <textarea class="form-control" id="specialRequests" rows="3"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-custom">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
