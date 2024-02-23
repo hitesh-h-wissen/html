@@ -4,137 +4,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trekking Articles</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Travel Articles</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+         body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+
+        .card {
+            transition: transform .2s; /* Animation */
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.02); /* Slightly enlarge cards on hover */
+            box-shadow: 0 0 11px rgba(33,33,33,.2); /* Add shadow effect on hover */
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover; /* Ensure images cover the card area */
+        }
+
+        .card-title {
+            font-weight: 500;
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #adb5bd;
+        }
+
+        h2 {
+            margin-top: 80px; /* Adjust top margin to account for fixed navbar */
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .btn-link {
+            text-decoration: none;
+            font-weight: 500;
+            color: #0d6efd;
+        }
+
+        .btn-link:hover {
+            color: #0a58ca;
+        }
+    </style>
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="index.html">Trekking Adventures</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="all_treks.html">Destinations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="customize.html">Customize My Trek</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gallery.html">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="articles.html">Articles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="store.html">Store</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-
-            </ul>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Trekking Adventures</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="all_treks.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customize.html">Customize My Trek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="articles.html">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-
-    <div class="container mt-5 p-5">
-        <h2 class="mb-4">Trekking Articles</h2>
-        <div class="row">
-            <!-- Example Article -->
-            <div class="col-md-4 w-40">
-                <div class="card" style="width: 18rem;">
-                    <img src="resources/images/trek (82).jpg" class="card-img-top" alt="Article Image">
+    
+    <div class="container my-5">
+        <h2>Travel Articles</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="resources/images/trek (82).jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Choosing Hotels: Key Considerations On Your Trip!</h5>
-                        <p class="card-text">If you are planning the trip and your flights are booked, you definitely
-                            need to move to the next decision, which is choosing hotels for your loved ones. In this
-                            case, you need to go for a highly convenient and comfortable option because any location
-                            that could be better in terms of facilities can be highly frustrating and ultimately will
-                            spoil the entire trip. Hence, considering staying in a room at Neemrana Hotels is an
-                            excellent idea so everybody can proceed efficiently and have a good experience throughout
-                            the journey. </p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <p class="card-text">Click to read more</p>
+                        <div class="collapse" id="article1">
+                            <p class="card-text">If you are planning the trip and your flights are booked, you definitely
+                                need to move to the next decision, which is choosing hotels for your loved ones. In this
+                                case, you need to go for a highly convenient and comfortable option because any location
+                                that could be better in terms of facilities can be highly frustrating and ultimately will
+                                spoil the entire trip. Hence, considering staying in a room at Neemrana Hotels is an
+                                excellent idea so everybody can proceed efficiently and have a good experience throughout
+                                the journey. </p>
+                        </div>
+                        <a class="btn btn-link" data-bs-toggle="collapse" href="#article1" role="button" aria-expanded="false" aria-controls="article1">Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="resources/images/trek (10).jpg" class="card-img-top" alt="Article Image">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="resources/images/trek (10).jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Things To Do In Varkala - Complete Travel Guide</h5>
-                        <p class="card-text">Welcome to the ultimate Varkala Travel Guide, where we talk in-depth about
-                            all the things to do in Varkala. Our aim is simple: to empower travellers with comprehensive
-                            insights, ensuring every moment spent in Varkala becomes unforgettable.
-
-                            Whether you're drawn by the allure of pristine beaches, intrigued by the town's rich
-                            cultural heritage, seeking spiritual solace at ancient shrines, or simply craving a retreat
-                            amidst nature's embrace, Varkala holds something magical for everyone.
-
-                            Join us as we unravel the treasures of Varkala—revealing its hidden gems and guiding you
-                            through its vibrant tapestry of attractions, activities, accommodations, and more. Embark on
-                            a virtual exploration that will pave the way for an enriching and fulfilling vacation in
-                            this coastal paradise.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <p class="card-text">Click to read more</p>
+                        <div class="collapse" id="article2">
+                            <p class="card-text">Welcome to the ultimate Varkala Travel Guide, where we talk in-depth about
+                                all the things to do in Varkala. Our aim is simple: to empower travellers with comprehensive
+                                insights, ensuring every moment spent in Varkala becomes unforgettable.
+    
+                                Whether you're drawn by the allure of pristine beaches, intrigued by the town's rich
+                                cultural heritage, seeking spiritual solace at ancient shrines, or simply craving a retreat
+                                amidst nature's embrace, Varkala holds something magical for everyone.
+    
+                                Join us as we unravel the treasures of Varkala—revealing its hidden gems and guiding you
+                                through its vibrant tapestry of attractions, activities, accommodations, and more. Embark on
+                                a virtual exploration that will pave the way for an enriching and fulfilling vacation in
+                                this coastal paradise.</p>
+                        </div>
+                        <a class="btn btn-link" data-bs-toggle="collapse" href="#article2" role="button" aria-expanded="false" aria-controls="article2">Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="resources/images/trek (83).jpg" class="card-img-top" alt="Article Image">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="resources/images/trek (83).jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Bir Billing Ultimate Travel Guide: Everything You Need to Know!</h5>
-                        <p class="card-text">This comprehensive guide will take you through Bir Billing, from the
-                            heights of adrenaline-pumping paragliding adventures to the depths of Tibetan culture and
-                            serene natural beauty. Whether you’re an adventure enthusiast, a culture buff, or a nature
-                            lover, this place has something unique to offer. So fasten your seatbelt, metaphorically
-                            speaking, and get ready for an unforgettable travel experience.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <p class="card-text">Click to read more</p>
+                        <div class="collapse" id="article3">
+                            <p class="card-text">This comprehensive guide will take you through Bir Billing, from the
+                                heights of adrenaline-pumping paragliding adventures to the depths of Tibetan culture and
+                                serene natural beauty. Whether you’re an adventure enthusiast, a culture buff, or a nature
+                                lover, this place has something unique to offer. So fasten your seatbelt, metaphorically
+                                speaking, and get ready for an unforgettable travel experience.</p>
+                        </div>
+                        <a class="btn btn-link" data-bs-toggle="collapse" href="#article3" role="button" aria-expanded="false" aria-controls="article3">Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="resources/images/trek (84).webp" class="card-img-top" alt="Article Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Harsil Valley: Ultimate Travel Guide (2024)</h5>
-                        <p class="card-text">Welcome to the enchanting world of Harsil Valley, a hidden gem nestled
-                            amidst the majestic Himalayas. From its picturesque landscapes and cascading waterfalls to
-                            its vibrant culture and serene ambience, Harshil Valley promises to captivate your heart at
-                            every turn.
-
-                            Whether you are an adventure seeker or simply seeking tranquillity, Harshil Valley has
-                            something extraordinary for everyone.
-
-                            So pack your bags, grab your camera, and prepare for a complete travel guide that will
-                            unravel the secrets of this mystical destination.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Repeat for other articles -->
+            <!-- Repeat for other articles, with unique IDs for each collapse element -->
         </div>
     </div>
-
     <footer class="footer mt-auto py-3 bg-dark text-white fixed-bottom">
         <div class="container text-center">
             <span>&copy; 2024 Trekking Adventures</span>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <!-- Bootstrap 5 JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
